@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lonly Cuby", "Assembly-CSharp-firstpass.csproj", "{B04BAFF8-FEF0-E1D9-7702-9C7F44EEC592}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lonly Cuby", "Assembly-CSharp.csproj", "{991BB191-37B8-BB53-F93F-70C96E274957}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B04BAFF8-FEF0-E1D9-7702-9C7F44EEC592}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B04BAFF8-FEF0-E1D9-7702-9C7F44EEC592}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B04BAFF8-FEF0-E1D9-7702-9C7F44EEC592}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B04BAFF8-FEF0-E1D9-7702-9C7F44EEC592}.Release|Any CPU.Build.0 = Release|Any CPU
+		{991BB191-37B8-BB53-F93F-70C96E274957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{991BB191-37B8-BB53-F93F-70C96E274957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{991BB191-37B8-BB53-F93F-70C96E274957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{991BB191-37B8-BB53-F93F-70C96E274957}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
