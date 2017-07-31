@@ -5,6 +5,7 @@ using UnityEngine;
 public class WhiteObstacle : MonoBehaviour {
 
 	public GameObject moverObject=null;
+	private GameObject player=null;
 	private Renderer rend=null;
 	private bool isVisible=false;
 	public double powerValue=0.5;//unit of every single white in power of batter(temp 1)
@@ -12,6 +13,7 @@ public class WhiteObstacle : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rend=moverObject.GetComponent<Renderer>();
+		player=GameObject.FindWithTag("Player");
 
 	}
 
@@ -40,6 +42,9 @@ public class WhiteObstacle : MonoBehaviour {
 
 	void Update () {		
 
-		IsVisible();
+		//IsVisible();
+		if(player.transform.position.z>transform.position.z+20f){
+			Destroy(this.gameObject);
+		}
 	}
 }

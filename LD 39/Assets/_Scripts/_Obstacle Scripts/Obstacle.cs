@@ -5,7 +5,7 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour {
 
 	public GameObject moverObject=null;
-
+	private GameObject player=null;
 	private Renderer rend=null;
 	private bool isVisible=false;
 
@@ -13,6 +13,7 @@ public class Obstacle : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rend=moverObject.GetComponent<Renderer>();
+		player=GameObject.FindWithTag("Player");
 
 	}
 
@@ -49,6 +50,9 @@ public class Obstacle : MonoBehaviour {
 
 	void Update () {		
 
-		IsVisible();
+		//IsVisible();
+		if(player.transform.position.z>transform.position.z+20f){
+			Destroy(this.gameObject);
+		}
 	}
 }

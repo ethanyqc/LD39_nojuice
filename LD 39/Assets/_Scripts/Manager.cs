@@ -13,6 +13,7 @@ public class Manager : MonoBehaviour {
 	public GameObject guiGameOver=null;
 	public LevelGenerator levelGenerator=null;
 	public GameObject batt=null;
+	public Player player=null;
 
 	public float currentDistance=0;
 	public double currentPower=0.5;
@@ -41,25 +42,28 @@ public class Manager : MonoBehaviour {
 	}
 
 	void Update(){
-		if(currentPower==1||currentPower==1.5){
-			batt.transform.GetChild(0).gameObject.SetActive(true);
-			batt.transform.GetChild(1).gameObject.SetActive(false);
-			batt.transform.GetChild(2).gameObject.SetActive(false);
-		}
-		else if(currentPower==2||currentPower==2.5){
-			batt.transform.GetChild(0).gameObject.SetActive(true);
-			batt.transform.GetChild(1).gameObject.SetActive(true);
-			batt.transform.GetChild(2).gameObject.SetActive(false);
-		}
-		else if(currentPower==3){
-			batt.transform.GetChild(0).gameObject.SetActive(true);
-			batt.transform.GetChild(1).gameObject.SetActive(true);
-			batt.transform.GetChild(2).gameObject.SetActive(true);
+		if(player.isDead==false){
+			if(currentPower==1||currentPower==1.5){
+				batt.transform.GetChild(0).gameObject.SetActive(true);
+				batt.transform.GetChild(1).gameObject.SetActive(false);
+				batt.transform.GetChild(2).gameObject.SetActive(false);
+			}
+			else if(currentPower==2||currentPower==2.5){
+				batt.transform.GetChild(0).gameObject.SetActive(true);
+				batt.transform.GetChild(1).gameObject.SetActive(true);
+				batt.transform.GetChild(2).gameObject.SetActive(false);
+			}
+			else if(currentPower==3){
+				batt.transform.GetChild(0).gameObject.SetActive(true);
+				batt.transform.GetChild(1).gameObject.SetActive(true);
+				batt.transform.GetChild(2).gameObject.SetActive(true);
+			}
 		}
 		else{
 			batt.transform.GetChild(0).gameObject.SetActive(false);
 			batt.transform.GetChild(1).gameObject.SetActive(false);
 			batt.transform.GetChild(2).gameObject.SetActive(false);
+			batt.transform.GetChild(3).gameObject.SetActive(false);
 		}
 	}
 

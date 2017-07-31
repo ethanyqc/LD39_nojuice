@@ -5,12 +5,14 @@ using UnityEngine;
 public class Platform : MonoBehaviour {
 
 	public GameObject plat=null;
+	private GameObject player=null;
 	private Renderer rend=null;
 	private bool isVisible=false;
 
 	// Use this for initialization
 	void Start () {
 		rend=plat.GetComponent<Renderer>();
+		player=GameObject.FindWithTag("Player");
 	}
 
 	void IsVisible(){
@@ -30,5 +32,8 @@ public class Platform : MonoBehaviour {
 	void Update () {		
 		
 		//IsVisible();
+		if(player.transform.position.z>transform.position.z+20f){
+			Destroy(this.gameObject);
+		}
 	}
 }
